@@ -6,7 +6,7 @@
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance
 byte accesUID2[7] = { 0x04, 0x27, 0x17, 0xE2, 0x3D, 0x75, 0x80 };
-
+bool kaartCorrect = false;
 
 void setup() {
   Serial.begin(115200);  // Initialize serial communications with the PC    
@@ -38,8 +38,13 @@ void loop() {
   
   if (memcmp(mfrc522.uid.uidByte, accesUID2, sizeof(mfrc522.uid.uidByte)) == 0) {
     Serial.println("Correcte kaart");
+    kaartCorrect = true;
+}
+else{
+  kaartCorrect = false;
 }
 
+Serial.println(kaartCorrect);
 mfrc522.PICC_HaltA();
 // Dump debug info about the card; PICC_HaltA() is automatically called
 }

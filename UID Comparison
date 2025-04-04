@@ -38,9 +38,9 @@ void loop() {
     Serial.println("Data read");
   }
   
-  if (mfrc522.uid.uidByte[0] == accesUID2[0] && mfrc522.uid.uidByte[1] == accesUID2[1] && mfrc522.uid.uidByte[2] == accesUID2[2] && mfrc522.uid.uidByte[3] == accesUID2[3] && mfrc522.uid.uidByte[4] == accesUID2[4] && mfrc522.uid.uidByte[5] == accesUID2[5] && mfrc522.uid.uidByte[6] == accesUID2[6]) {
+  if (memcmp(mfrc522.uid.uidByte, accesUID2, sizeof(mfrc522.uid.uidByte)) == 0) {
     Serial.println("Correcte kaart");
-  }
+}
 
 mfrc522.PICC_HaltA();
 // Dump debug info about the card; PICC_HaltA() is automatically called

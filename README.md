@@ -11,7 +11,7 @@ Rfid tags, een interessante technologie waarmee onze studentenkaarten werken. Oo
 <img src="afbeeldingen/schakeling_RFID.png" width="30%">
 
 Hiervoor wordt de schakeling zoals hierboven gebruikt.
-Allereerst werd de library dump info gebruikt. Uit deze library kan alle informatie gehaald worden die een kaart bevat. En is nodig om een kaart als correct te definiëren. 
+Allereest wordt de nfc library gedownload. Binnen de library kan onder "dump info" kan alle informatie gehaald worden die een ingelezen kaart bevat. Vervolgens kan een correcte kaart gedefiniëerd worden. Dit door de unieke code op te slaan. Vervolgens kan een controlemechanisme die de karakters controleerd worden toegevoegd.
 
 
 ## Deel servomotor 
@@ -35,4 +35,4 @@ Het uploaden van de code liep lang niet altijd vlot. Bij het gebruik van de ardu
 
 
 ### Rfid lezer
-Zonder library is het gebruik van een rfid lezer heel complex. Zelfs bij het gebruik van een library is het aanpassen van de code heel gevoelig.
+Zonder de library als het gebruik van een rfid lezer is vrij complex. Zelfs bij het gebruik van een library is het aanpassen van de code heel gevoelig. Het is niet altijd meteen duidelijk welke lijn welke info bevat.

@@ -12,7 +12,7 @@ byte accesUID2[7] = { 0x04, 0x27, 0x17, 0xE2, 0x3D, 0x75, 0x80 };//create array 
 Servo myServo; // Create servo object to control a servo motor
 int servoPin=8; //add the pin of the servo
 
-bool standMotor = false; //bool to check if open or closed
+int count = 0; // count to check if open or closed
 
 void setup() {
   Serial.begin(115200);  // Initialize serial communications with the PC                       // Do nothing if no serial port is opened (added for Arduinos based on ATMEGA32U4)
@@ -49,13 +49,13 @@ void loop() {
     delay(500);
     //als false dan draai ene hoek
     //als true draai andere hoek
-    if (standMotor = false){
+     if ((count%2)==0){
       myServo.write(90);
     }
-    if(standMotor = true){
+    if((count%2)!=0){
       myServo.write(0);
     }
-    standMotor = (1-standMotor);
+    count+=1;
   }
 
 

@@ -1,7 +1,8 @@
 <p align="center">
-<img src="afbeeldingen/2.png" width="30%">
-<img src="afbeeldingen/3.png" width="30%">
-<img src="afbeeldingen/1.png" width="30%">
+<img src="afbeeldingen/2.png" width="45%">
+<img src="afbeeldingen/3.png" width="45%">
+<img src="afbeeldingen/1.png" width="45%">
+<img src="afbeeldingen/6.png" width="45%">
 
 ## Inleiding
 Rfid tags, een interessante technologie waarmee onze studentenkaarten werken. Ook de kluisjes in het A gebouw en verschillende deursloten werken hiermee. Het is een nuttige en ruim toepasbare tool. In dit project proberen we onder andere de volgende vragen te beantwoorden: Hoe werkt deze technologie precies? Is dit een complexe theorie? En kunnen we dit zelf toepassen? Aan de hand van deze technologie (servo, rfid tag en lezer) werken we zelf een kluisje uit.
